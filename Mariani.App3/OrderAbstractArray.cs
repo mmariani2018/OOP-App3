@@ -14,6 +14,8 @@
             orderArray();
         }
 
+        //TESTING
+
         private void orderArray()
         {
             int smallestLeft;
