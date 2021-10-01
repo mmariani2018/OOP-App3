@@ -1,15 +1,15 @@
-﻿namespace Arrays
+﻿namespace Mariani.App3
 {
     class OrderStringArray
     {
-        private Node[] arrayToOrder;
-        private Node[] orderedArray;
+        private StringNode[] arrayToOrder;
+        private StringNode[] orderedArray;
         private int indexOfInsertIntoOrderedArray = 0;
 
-        public OrderStringArray(Node[] theArray)
+        public OrderStringArray(StringNode[] theArray)
         {
             arrayToOrder = theArray;
-            orderedArray = new Node[arrayToOrder.Length];
+            orderedArray = new StringNode[arrayToOrder.Length];
 
             orderArray();
         }
@@ -72,14 +72,14 @@
             //at least one element in the array is not null
             for (int n = elementSmallestNodeName + 1; n < arrayToOrder.Length; n++)
             {
-                if (arrayToOrder[n] != null && arrayToOrder[n].getFirstName().CompareTo(arrayToOrder[elementSmallestNodeName].getFirstName()) < 0)
+                if (arrayToOrder[n] != null && arrayToOrder[n].getName().CompareTo(arrayToOrder[elementSmallestNodeName].getName()) < 0)
                     elementSmallestNodeName = n;
             }
 
             return elementSmallestNodeName;
         }
 
-        public Node[] getOrderedArray()
+        public StringNode[] getOrderedArray()
         {
             return orderedArray;
         }

@@ -1,15 +1,15 @@
-﻿namespace Arrays
+﻿namespace Mariani.App3
 {
     class OrderAbstractArray
     {
-        private Node[] arrayToOrder;
-        private Node[] orderedArray;
+        private AbstractNode[] arrayToOrder;
+        private AbstractNode[] orderedArray;
         private int indexOfInsertIntoOrderedArray = 0;
 
-        public OrderAbstractArray(Node[] theArray)
+        public OrderAbstractArray(AbstractNode[] theArray)
         {
             arrayToOrder = theArray;
-            orderedArray = new Node[arrayToOrder.Length];
+            orderedArray = new AbstractNode[arrayToOrder.Length];
 
             orderArray();
         }
@@ -81,7 +81,7 @@
             return elementSmallestNodeName;
         }
 
-        public Node[] getOrderedArray()
+        public AbstractNode[] getOrderedArray()
         {
             return orderedArray;
         }
