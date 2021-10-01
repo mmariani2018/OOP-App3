@@ -9,28 +9,41 @@ namespace Mariani.App3
         ViewArray view = new ViewArray();
         public CreateArray()
         {
-            /*
+            
             PrimativeNode[] thePrimativeArray = createThePrimativeArray();
             populateThePrimativeArray(thePrimativeArray);
 
             view.showArray(thePrimativeArray);
-            */
+
+            OrderPrimativeArray inOrder = new OrderPrimativeArray(thePrimativeArray);
+            thePrimativeArray = inOrder.getOrderedArray();
+            
+
             /*
             int numElements = determineNumberOfElementsInTheArray();
             StringNode[] theStringArray = createStringArray(numElements);
             populateTheStringArray(theStringArray);
 
             view.showStringArray(theStringArray);
+
+            OrderStringArray inOrder = new OrderStringArray(theStringArray);
+            theStringArray = inOrder.getOrderedArray(); 
             */
+
             
+            /*
             int elements = determineNumberOfElementsInTheArray();
             AbstractNode[] theAbstarctArray = createAbstractArray(elements);
             populateTheAbstractArray(theAbstarctArray);
 
             view.showAbstractArray(theAbstarctArray);
-            
 
-            
+            OrderAbstractArray inOrder = new OrderAbstractArray(theAbstarctArray);
+            theAbstarctArray = inOrder.getOrderedArray();
+            */
+
+
+
         }
         private void showTheArray(PrimativeNode[] thePrimativeArray, StringNode[] theStringArray, AbstractNode[] theAbstarctArray)
         {
